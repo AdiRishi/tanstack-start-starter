@@ -35,7 +35,12 @@ export function App() {
       <form onSubmit={submitPerson} className="space-y-2 rounded-lg border bg-card p-4">
         <Label htmlFor="person-name">Name</Label>
         <div className="flex gap-2">
-          <Input id="person-name" value={name} onValueChange={setName} placeholder="Ada Lovelace" />
+          <Input
+            id="person-name"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Ada Lovelace"
+          />
           <Button type="submit" disabled={!name.trim()}>
             Add
           </Button>
