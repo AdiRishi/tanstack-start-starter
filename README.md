@@ -4,7 +4,7 @@
 
 [![TanStack Start](https://img.shields.io/badge/TanStack_Start-1.x-blue?logo=react)](https://tanstack.com/start)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![Uses pnpm](https://img.shields.io/badge/pnpm-11.x-orange?logo=pnpm)](https://pnpm.io/)
+[![Uses pnpm](https://img.shields.io/badge/pnpm-12.x-orange?logo=pnpm)](https://pnpm.io/)
 
 ## What's included
 
@@ -17,19 +17,22 @@
 
 ## Prerequisites
 
-- Node.js 22+ (LTS)
-- pnpm 11.x (pinned via `packageManager` in `package.json`)
+- Node.js matching `.node-version`, currently `lts/Krypton`
+- pnpm 12.3.4, pinned via `packageManager` in `package.json`
 
 ## Quick start
 
 ```bash
 npx degit AdiRishi/tanstack-start-starter my-app
 cd my-app
+cp .env.example .env.local
 pnpm install
 pnpm dev
 ```
 
 The app runs at `http://localhost:8080`.
+
+Keep local environment values in `.env.local`, which Git ignores. Add variable names and safe placeholders to `.env.example`. Variables prefixed with `VITE_` are public and must not contain secrets.
 
 ## Tech stack
 
